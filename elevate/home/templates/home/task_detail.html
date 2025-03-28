@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+        {{task.id}} || {{task.title}} || {{task.description}}
+        <br>
+        <a href="{% url 'home' %}">Back</a>
+
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h3>Create Your Task!</h3>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+            Are U sure U want to delete '{{task.title}}' ?'
+
+        <button type="submit">Delete</button>
+        &nbsp;
+        <a href="{% url 'home' %}">Back</a>
+
+    </form>
+    
+{% endblock content %}
+
+
+
