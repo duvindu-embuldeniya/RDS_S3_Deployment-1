@@ -1,35 +1,82 @@
-{% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width-device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/5/superhero/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+  </head>
 
-    <h5>Reviews!</h5>
-    {% for review in reviews %}
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-light justify-content-center"
+  >
+    <a class="navbar-brand main-heading"> &nbsp; Thoughts </a>
 
-        {{review.id}} || {{review.reviewer_name}} || {{review.review_title}}
-        <br>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    {% endfor %}
-    <hr>
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        &nbsp; &nbsp; &nbsp;
 
+        <li class="nav-item">
+          <a class="btn btn-primary navbar-btn" type="button" href="{% url 'register' %}"
+            >Register</a
+          >
+        </li>
 
-    <img src="{% static 'images/duvindu.jpg' %}" alt="my_img" height="150px" width="150px">
+        &nbsp; &nbsp; &nbsp;
 
+        <li class="nav-item">
+          <a class="btn btn-primary navbar-btn" type="button" href="{% url 'login' %}">Login</a>
+        </li>
 
-    <h5>Tasks!</h5>
-    {% for task in tasks %}
+        &nbsp; &nbsp; &nbsp;
+      </ul>
+    </div>
+  </nav>
 
-        {{task.id}} || <a href="{% url 'task-detail' task.pk %}">{{task.title}}</a> || {{task.description}} ||
-        <a href="{% url 'task-update' task.id %}">Update</a>
-                                | 
-        <a href="{% url 'task-delete' task.id %}">Delete</a>
-        <br>
+  <body>
+    <br />
+    <br />
 
-    {% endfor %}
-    <hr>
+    <div class="text-center">
+      <h2>A home for your thoughts.</h2>
 
+      <br />
 
-{% endblock content %}
+      <a class="btn btn-outline-primary" type="button" href="{% url 'register' %}">Register</a>
+    </div>
+  </body>
 
+  <script src="{% static 'js/script.js' %}"></script>
 
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    crossorigin="anonymous"
+  ></script>
 
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+  ></script>
+</html>
