@@ -19,11 +19,11 @@
 
           <br>&nbsp;&nbsp;&nbsp;&nbsp;
           <li class="nav-item">
-            <a class="btn btn-primary navbar-btn" type="button" href="">Create Thought</a>
+            <a class="btn btn-primary navbar-btn" type="button" href="{% url 'thought-create' %}">Create Thought</a>
           </li>
           <br>&nbsp;&nbsp;&nbsp;&nbsp;
           <li class="nav-item">
-            <a class="btn btn-primary navbar-btn" type="button" href="">View Thought</a>
+            <a class="btn btn-primary navbar-btn" type="button" href="{% url 'thoughts-mine' request.user.username %}">My Thought</a>
           </li>
 
         &nbsp; &nbsp; &nbsp;
