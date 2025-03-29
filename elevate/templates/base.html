@@ -10,8 +10,23 @@
     <title>Document</title>
 </head>
 <body>
-    
-    {% include 'navbar.html' %}
+
+    <div>
+      {% if messages %}
+          {% for message in messages %}
+              <div class="msg-timer" style="width: 300px;
+                          text-align: center;
+                          padding: 20px;
+                          background-color: blue;
+                          margin: 20px auto;
+                          border-radius: 20px;">
+                          <div>
+                              {{message}}
+                          </div>      
+              </div>
+          {% endfor %}
+      {% endif %}
+    </div>
 
     {% block content %}
     {% endblock content %}

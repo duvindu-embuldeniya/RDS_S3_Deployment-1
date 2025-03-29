@@ -3,7 +3,18 @@
 
 {% block content %}
     
-    <h1>Dashboard</h1>
+    {% include 'navbar.html' %}
+
+    <div class="container bg-info shadow-md p-5 form-layout">
+        <h1 style="text-align: center;">Dashboard</h1>
+        <br>
+
+        <div style="text-align: center;">
+            <a class="btn btn-primary navbar-btn" 
+            type="button" href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+    
     
 {% endblock content %}
 
