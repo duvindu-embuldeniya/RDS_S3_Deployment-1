@@ -138,6 +138,14 @@ LOGIN_URL = 'login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' #libry we sue
+EMAIL_HOST = 'smtp.gmail.com' #service provider
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
